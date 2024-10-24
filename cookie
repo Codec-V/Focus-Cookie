@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front page</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=DynaPuff:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kablammo&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        /* scrollbar-width: none; */
+        font-family: "Dosis", sans-serif;
+        color: var(black);
+    }
+    :root{
+        --white : white;
+        --black : black;
+    }
+    body{
+        background-color: var(--white);
+
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 200px;
+        font-weight: 500;
+        color: var(--white);
+        height: 200px;
+
+    }
+
+    p {
+        text-align: center;
+        font-size: 80px;
+        color: var(--white);
+        margin-top: -20px;
+        height: 100px;
+        z-index: 2;
+    }
+
+    .main {
+        position:relative;
+        top: 34.2vh;
+        height: 35vh;
+        justify-content: center;
+        z-index: 1;
+        mix-blend-mode: difference;
+        /* border: 2px solid white; */
+        
+    }
+
+    .main1 {
+        position: relative;
+        top: 350px;
+        height: 105vh;
+        background-color: var(--white);
+        color: white;
+    }
+
+    .main2 {
+        position: relative;
+        height: 80vh;
+        background-color: var(--black);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    #cookie {
+        position: absolute;
+        z-index: 2;
+        top: 150px;
+        left: -20px;
+        width: 570px;
+        filter: grayscale(1);
+
+    }
+
+    #cookie2 {
+        position: absolute;
+        z-index: 2;
+        top: 190px;
+        right: 0;
+        width: 450px;
+        filter: grayscale(1);
+
+    }
+
+    #cookie3 {
+        position: absolute;
+        z-index: 2;
+        top: -100px;
+        left: 34vw;
+        width: 450px;
+        filter: grayscale(1);
+        justify-self: center;
+        /* transform: translateX(140%); */
+    }
+
+    .cookiecontainer {
+        position: absolute;
+        background-color: black;
+        border: 10px solid var(--white);
+        margin-top: 20px;
+        height: 80vh;
+        width: 98.7%;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <div class="cookiecontainer">
+        <img id="cookie" src="/images/cookie-removebg-preview.png" alt="">
+        <img id="cookie2" src="/images/cookie_2-removebg-preview.png" alt="">
+        <img id="cookie3" src="/images/cookie3-removebg-preview.png" alt="">
+    </div>
+    <div class="textcontainer">
+    <div class="main" id="text">
+        <p>Focus</p>
+        <h1>COOKIES</h1>
+    </div>
+    <div class="main1">hello</div>
+    <div class="main2"></div>
+    </div>
+    <script type="text/javascript">
+        let cookie = document.getElementById("cookie");
+        let cookie2 = document.getElementById("cookie2");
+        let cookie3 = document.getElementById("cookie3");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll',
+            function () {
+                var value = window.scrollY;
+
+                cookie.style.marginLeft = -value * 1.5 + 'px';
+                cookie.style.marginTop = -value * 1 + 'px';
+                cookie2.style.marginRight = -value * 1.5 + 'px';
+                cookie2.style.marginTop = -value * 1 + 'px';
+                cookie3.style.marginTop = -value * 1 + 'px';
+
+                text.style.top = 243  + value * 1 + 'px';
+            }
+        )
+    </script>
+</body>
+
+</html>
